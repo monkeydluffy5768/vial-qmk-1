@@ -4,8 +4,8 @@
     "productId": "0x2019",
     "lighting": "none",
     "matrix": {
-        "rows": 10,
-        "cols": 2
+        "rows": 0,
+        "cols": 0
     },
     "layouts": {
         "keymap": [
