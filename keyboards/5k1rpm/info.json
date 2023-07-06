@@ -5,10 +5,19 @@
     "bootloader": "atmel-dfu",
     "debounce": 5,
     "features": {
+        "encoder": true,
         "bootmagic": true,
         "extrakey": true,
         "mousekey": true
     },
+
+    "encoder": {
+        "rotary": [
+          { "pin_a": "B4", "pin_b": "B5", "resolution": 4 },
+          
+        ]
+      },
+
     "matrix_pins": {
         "direct": [
             ["D1"],
@@ -19,6 +28,7 @@
             ["E6"]
             ]
     },
+
     "processor": "atmega32u4",
     "usb": {
         "device_version": "0.0.1",
