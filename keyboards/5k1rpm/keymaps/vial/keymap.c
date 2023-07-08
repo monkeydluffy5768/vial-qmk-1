@@ -12,6 +12,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [1] = LAYOUT(KC_6, KC_7, KC_8, KC_9, KC_1, KC_2)
 };
 
+
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [0] =   { ENCODER_CCW_CW(KC_6, KC_7)  },
@@ -20,4 +21,40 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
 };
 #endif
 
+#ifdef RGB_MATRIX_ENABLE
+led_config_t g_led_config = { {
+    // Key Matrix to LED Index
+    { 1 },
+    { 1 },
+    { 2 },
+    { 2 },
+    { 3 }
+}, {
+    // LED Index to Physical Position
+    { 0, 0 }, 
+    { 0, 0 }, 
+    { 1, 0 },
+    { 1, 0 }, 
+    { 2, 0 }
+}, {
+    // LED Index to Flag
+    4, 4, 4, 4, 4,
+} };
+#endif
 
+void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
+    const int led_index = 2;
+    switch(get_highest_layer(layer_state)) {
+        case 1:
+            rgb_matrix_set_color(led_index, RGB_WHITE);
+            break;
+        case 2:
+            rgb_matrix_set_color(led_index, RGB_BLUE);
+            break;
+        case 3:
+            rgb_matrix_set_color(led_index, RGB_GREEN);
+            break;
+        default:
+            break;
+    }
+}
