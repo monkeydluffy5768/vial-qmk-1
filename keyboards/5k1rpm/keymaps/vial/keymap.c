@@ -24,37 +24,35 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
 #ifdef RGB_MATRIX_ENABLE
 led_config_t g_led_config = { {
     // Key Matrix to LED Index
-    { 1 },
+    { 0 },
     { 1 },
     { 2 },
-    { 2 },
-    { 3 }
+    { 3 },
+    { 4 },
+    { 5 }
 }, {
     // LED Index to Physical Position
-    { 0, 0 }, 
-    { 0, 0 }, 
-    { 1, 0 },
+    { 5, 0 }, //1
     { 1, 0 }, 
-    { 2, 0 }
+    { 2, 0 },
+    { 3, 0 },
+    { 4, 0 },
+    { 0, 0 },
+    { 1, 0 }
 }, {
     // LED Index to Flag
-    4, 4, 4, 4, 4,
+    4, 4, 4, 4, 4, 4, 4
 } };
 #endif
 
-void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
-    const int led_index = 2;
-    switch(get_highest_layer(layer_state)) {
-        case 1:
-            rgb_matrix_set_color(led_index, RGB_WHITE);
-            break;
-        case 2:
-            rgb_matrix_set_color(led_index, RGB_BLUE);
-            break;
-        case 3:
-            rgb_matrix_set_color(led_index, RGB_GREEN);
-            break;
-        default:
-            break;
+uint8_t rgb_matrix_map_row_column_to_led_kb(uint8_t row, uint8_t column, uint8_t *led_i) {
+    if (row == 0) {
+        switch (column) {
+            case 0: // center encoder
+                led_i[0] = 6;
+                return 1;
+
+        }
     }
+    return 0;
 }

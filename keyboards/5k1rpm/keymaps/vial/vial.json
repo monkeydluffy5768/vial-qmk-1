@@ -4,7 +4,7 @@
   "productId": "0x2019",
   "lighting": "vialrgb",
   "matrix": {
-      "rows": 6,
+      "rows": 20,
       "cols": 1
   },
   "layouts": {
