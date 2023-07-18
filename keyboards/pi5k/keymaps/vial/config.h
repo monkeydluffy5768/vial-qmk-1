@@ -13,4 +13,4 @@
 #define DRIVER_LED_TOTAL 20
 #define ENABLE_RGB_MATRIX_TYPING_HEATMAP
 #define ENABLE_RGB_MATRIX_CYCLE_UP_DOWN	
-#define NOP_FUDGE 0.4
+#define WS2812_PIO_USE_PIO1 // Force the usage of PIO1 peripheral, by default the WS2812 implementation uses the PIO0 peripheral

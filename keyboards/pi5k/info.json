@@ -13,7 +13,7 @@
 
     "encoder": {
         "rotary": [
-          { "pin_a": "GP8", "pin_b": "GP9", "resolution": 4 }
+          { "pin_a": "GP8", "pin_b": "GP9", "resolution": 2 }
           
         ]
       },
