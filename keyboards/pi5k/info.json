@@ -1,0 +1,51 @@
+{
+    "manufacturer": "DSSA",
+    "keyboard_name": "DirectPins Pico",
+    "maintainer": "monkeydluffy5768",
+    "bootloader": "rp2040",
+    "debounce": 5,
+    "features": {
+        "encoder": true,
+        "bootmagic": true,
+        "extrakey": true,
+        "mousekey": true
+    },
+
+    "encoder": {
+        "rotary": [
+          { "pin_a": "GP8", "pin_b": "GP9", "resolution": 4 }
+          
+        ]
+      },
+
+    "matrix_pins": {
+        "direct": [
+            ["GP1"],
+            ["GP2"],
+            ["GP3"],
+            ["GP4"],
+            ["GP6"],
+            ["GP7"]
+            ]
+    },
+
+    "processor": "RP2040",
+    "usb": {
+        "device_version": "0.0.1",
+        "pid": "0x2320",
+        "vid": "0xFEED"
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {"label":"GP1", "matrix": [0, 0], "x":0, "y":0},
+                {"label":"GP2", "matrix": [1, 0], "x":0, "y":1},
+                {"label":"GP3", "matrix": [2, 0], "x":0, "y":4},
+                {"label":"GP4", "matrix": [3, 0], "x":0, "y":5},
+                {"label":"GP6", "matrix": [4, 0], "x":0, "y":6},
+                {"label":"GP7", "matrix": [5, 0], "x":0, "y":7}
+                
+            ]
+        }
+    }
+}
