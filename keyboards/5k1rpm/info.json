@@ -1,7 +1,7 @@
 {
-    "manufacturer": "Zach White",
-    "keyboard_name": "DirectPins ProMicro",
-    "maintainer": "skullydazed",
+    "manufacturer": "DSSA",
+    "keyboard_name": "5Key_1R",
+    "maintainer": "monkeydluffy5768",
     "bootloader": "atmel-dfu",
     "debounce": 5,
     "features": {
